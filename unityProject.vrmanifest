@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.grfevaluation.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "C:\\Users\\IRLab\\Documents\\Unity Projects\\GRF Validation\\Granulated Rest Frames\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "GRFEvaluation [Testing]"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HighlightMarker</name>
+    </assembly>
+    <members>
+        <member name="F:HighlightMarker.TextBlockHighlighting.FullTextProperty">
+            <summary>
+                FullText property is used to bind to the content which is normally bound to TextBlock.Text.
+            </summary>
+        </member>
+        <member name="F:HighlightMarker.TextBlockHighlighting.ForegroundProperty">
+            <summary>
+                The foreground color used for text highlighting.
+            </summary>
+        </member>
+        <member name="F:HighlightMarker.TextBlockHighlighting.BackgroundProperty">
+            <summary>
+                The background color used for text highlighting.
+            </summary>
+        </member>
+        <member name="F:HighlightMarker.TextBlockHighlighting.HighlightedTextProperty">
+            <summary>
+                HighlightedText is usually bound to the highlighter source, which may be the Text property of a search box.
+            </summary>
+        </member>
+        <member name="M:HighlightMarker.EnumerableExtensions.ToConsecutiveGroups(System.Collections.Generic.IEnumerable{System.Int32})">
+            <summary>
+                Transforms an IEnumerable into groups of integer lists which are consecutivly ascending.
+                Please make sure that it - depending on the application of this method - is neccessary to pre-sort the IEnumerable
+                in order to retrieve the right groups.
+            </summary>
+            <param name="source">The source.</param>
+            <returns>The groups of consecutive integer lists.</returns>
+        </member>
+        <member name="M:HighlightMarker.HighlightMarker.GetEnumerator">
+            <summary>
+                Gets the enumerator.
+                The enumerator returns all HighlightIndex items which indicate at which position in string FullText
+                parts of the given SearchText were found and how many characters long they were.
+            </summary>
+            <returns>The IEnumerator&lt;HighlightIndex&gt;.</returns>
+        </member>
+        <member name="T:HighlightMarker.IHighlightProcessor">
+            <summary>
+            You man want to use a HighlightProcessor to intercept the highlightable fulltext, 
+            e.g. replace diacritic characters in the fulltext.
+            </summary>
+        </member>
+        <member name="M:HighlightMarker.IHighlightProcessor.GetFulltextItems(System.String)">
+            <summary>
+            Processes the given <param name="fulltext">full test parameter</param>
+            and returns an array of strings. All returned strings are subject to highlighting.
+            </summary>
+            <param name="fulltext">The original fulltext.</param>
+            <returns></returns>
+        </member>
+        <member name="F:HighlightMarker.Range.LowerBound">
+            <summary>
+                LowerBound value of the range
+            </summary>
+        </member>
+        <member name="F:HighlightMarker.Range.UpperBound">
+            <summary>
+                UpperBound value of the range
+            </summary>
+        </member>
+        <member name="M:HighlightMarker.Range.IsValid">
+            <summary>
+                Determines if the range is valid
+            </summary>
+            <returns>True if range is valid, else false</returns>
+        </member>
+        <member name="M:HighlightMarker.Range.ContainsValue(System.Int32)">
+            <summary>
+                Determines if the provided value is inside the range
+            </summary>
+            <param name="value">The value to test</param>
+            <returns>True if the value is inside Range, else false</returns>
+        </member>
+        <member name="M:HighlightMarker.Range.IsInsideRange(HighlightMarker.Range)">
+            <summary>
+                Determines if this Range is inside the bounds of another range
+            </summary>
+            <param name="range">The parent range to test on</param>
+            <returns>True if range is inclusive, else false</returns>
+        </member>
+        <member name="M:HighlightMarker.Range.ContainsRange(HighlightMarker.Range)">
+            <summary>
+                Determines if another range is inside the bounds of this range
+            </summary>
+            <param name="range">The child range to test</param>
+            <returns>True if range is inside, else false</returns>
+        </member>
+    </members>
+</doc>

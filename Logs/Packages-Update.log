@@ -1,0 +1,12 @@
+
+=== Mon Aug  2 10:26:42 2021
+
+Packages were changed.
+Update Mode: mergeDefaultDependencies
+
+The following packages were added:
+  com.unity.test-framework@1.1.22
+The following packages were updated:
+  com.unity.probuilder from version 4.2.3 to 4.5.0
+  com.unity.textmeshpro from version 2.0.1 to 2.1.1
+  com.unity.xr.management from version 3.2.16 to 3.2.17
